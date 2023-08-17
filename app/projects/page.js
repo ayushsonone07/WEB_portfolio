@@ -35,6 +35,13 @@ const projects = [
     description: "This is project 4.",
     link: "https://ayushsonone07.github.io/joke/",
   },
+  {
+   id: 5,
+   image:"https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjk2Mi1hdW0tMDEta2x4Y3AwNTMuanBn.jpg",
+   title: "Promptia",
+   description: "Promptia : A FullStack Web App Project where you can Login with your Google Account and after that you can share, Edit and Delete your thoughts.",
+   link: "https://promptia-alpha.vercel.app",
+  },
 ];
 
 const ProjectsPage = () => {
