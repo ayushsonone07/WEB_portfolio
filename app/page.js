@@ -7,7 +7,7 @@ const Home = () => {
     <div className="">
       <div className="grid h-screen place-items-center">
         <h1 className="text-5xl from-zinc-700	font-bold text-center lg:text-9xl m-0">
-          <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-pulse">
+          <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-pulse relative z-0">
             Welcome
           </span>
           <br />
