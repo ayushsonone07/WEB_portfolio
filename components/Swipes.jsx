@@ -24,22 +24,22 @@ const Slider = () => {
         className='sm:w-96 sm:h-96 w-72 h-72'
       > 
         <SwiperSlide>
-          <Link href="https://i.ibb.co/f4ffkVw/AWS-Cloud-Foundations.jpg" >
+          <Link href="https://i.ibb.co/RcWfcMX/cs50x.jpg" >
             <Image src={cs50x} alt='cs50x_certificate' />
           </Link>
         </SwiperSlide>
         <SwiperSlide>
-          <Link href="https://i.ibb.co/J7W04sQ/AWS-Academy-Machine-Learning.jpg" >
+          <Link href="https://i.ibb.co/2ZtH8hX/Intel-one-API.jpg" >
             <Image src={Intel_oneAPI} alt='Intel_oneAPI_certificate' />
           </Link>
         </SwiperSlide>
         <SwiperSlide>
-          <Link href="https://i.ibb.co/RcWfcMX/cs50x.jpg" >
+          <Link href="https://i.ibb.co/f4ffkVw/AWS-Cloud-Foundations.jpg" >
             <Image src={AWS_cloud} alt='Cloud_certificate' />
           </Link>
         </SwiperSlide>
         <SwiperSlide>
-          <Link href="https://i.ibb.co/2ZtH8hX/Intel-one-API.jpg" >
+          <Link href="https://i.ibb.co/J7W04sQ/AWS-Academy-Machine-Learning.jpg" >
             <Image src={AWS_ML} alt='Machine_learing_certificate' />
           </Link>
         </SwiperSlide>
