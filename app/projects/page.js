@@ -1,5 +1,3 @@
-import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
 
 const projects = [
@@ -47,7 +45,7 @@ const projects = [
 const ProjectsPage = () => {
   return (
     <div className="w-full grid  place-items-center ">
-      <h1 className="lg:text-7xl from-zinc-700 font-bold text-center text-3xl m-0 flex-start ">
+      <h1 className="lg:text-7xl from-zinc-700 font-bold text-center text-3xl my-8 flex-start ">
         <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
           Projects
         </span>

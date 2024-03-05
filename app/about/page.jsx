@@ -18,8 +18,8 @@ const aboutPage = () => {
       <br />
       <h3>
         Strong in design and integration with intuitive problem-solving skills.
-        Proficient in C, PYTHON, JAVASCRIPT, SQL and NoSQL.
-        <br /> I have also larnn some modern technologies like REACT JS, NEXT
+        Proficient in C, PHP, JAVASCRIPT, SQL and NoSQL.
+        <br /> I have also learnt some modern technologies like REACT JS, NEXT
         js, GIT, LINUX. Passionate about implementing and launching new
         projects. Ability to translate business requirements into technical
         solutions.

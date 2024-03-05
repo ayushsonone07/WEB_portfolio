@@ -13,7 +13,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="h-fit w-full">
+    <footer className="h-fit w-full bg-slate-100">
       <hr className="w-full h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700" />
       <h1 className="text-center text-5xl font-bold my-8">Contact me here</h1>
       <div className="flex gap-4 items-center justify-center">

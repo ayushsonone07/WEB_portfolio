@@ -1,97 +1,43 @@
-import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
+import Badges from "@/components/Badges";
+import Motion, { Heading1, Heading } from "@/components/Motion";
+import Slider from "@/components/Swipes";
+import Image from 'next/image'
+import Profile from '@/public/avtar.png'
+import Skills from "@/components/Skills";
+
+export const metadata = {
+  title: 'Portfolio/ayushsonone07',
+  description: 'Portfolio website of Ayush Sonone',
+}
 
 const Home = () => {
   return (
-    <div className="">
+    <div>
       <div className="grid h-screen place-items-center">
-        <h1 className="text-5xl from-zinc-700	font-bold text-center lg:text-9xl m-0">
-          <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-pulse relative z-0">
-            Welcome
-          </span>
-          <br />
-          <span className="text-5xl lg:text-7xl">to my Portfolio.site</span>
-        </h1>
-        <p className="text-center hover:text-slate-500 ">
-          scroll down to see more &darr;
-        </p>
+          <div className="grid grid-cols-12 place-items-center">
+            <div className="sm:col-span-8 col-span-12"> 
+              <Heading/>
+              <Motion/>
+              <Heading1/>
+              <p className="text-center hover:text-slate-500 sm:visible invisible pt-28">scroll down to see more &darr;</p>
+            </div>
+            <div className="sm:col-span-4 col-span-12">
+              <Image src={Profile} className="sm:w-[450px] sm:h-[450px] w-[250px] h-[250px] shadow-lg rounded-full mb-32"/>
+            </div>
+          </div>
       </div>
-      <section className="w-full h-screen	justify-center">
-        <h1 className="text-center text-5xl font-bold my-8">My Skills</h1>
-        <div className="lg:grid lg:grid-cols-3 lg:gap-10 grid-cols-1 grid-rows-3 ">
-          <div>
-            <h2 className="text-center text-3xl font-bold">Languages</h2>
-            <p className="text-center">
-              C- Languages <br /> Javascript
-            </p>
-          </div>
-          <br />
-          <div>
-            <h2 className="text-center text-3xl font-bold">Front-End</h2>
-            <p className="text-center">
-              HTML,
-              <br /> CSS,
-              <br /> Javascript,
-              <br /> React JS/ NEXT js
-            </p>
-          </div>
-          <br />
-          <div>
-            <h2 className="text-center text-3xl font-bold">Tools</h2>
-            <p className="text-center">
-              Git, <br /> Linux
-            </p>
-          </div>
+      <hr className="w-full h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700" />
+      <Skills/>
+      <hr className="w-full h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700" />
+      <div className="grid grid-cols-12">
+        <div className="sm:col-span-6 col-span-12">
+          <h1 className="text-center text-3xl font-bold my-8">My badges</h1>
+          <Badges/>
         </div>
-      </section>
-      <hr className="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700" />
-      <h1 className="text-center text-3xl font-bold my-28">My badges</h1>
-      <div className="lg:grid lg:grid-cols-4 lg:gap-3 mx-10 h-screen grid grid-cols-2 grid-rows-2">
-        <div
-          data-iframe-width="150"
-          data-iframe-height="270"
-          data-share-badge-id="b9246978-a6b7-4ef5-9654-3d4909fb5a57"
-          data-share-badge-host="https://www.credly.com"
-        ></div>
-        <script
-          type="text/javascript"
-          async
-          src="//cdn.credly.com/assets/utilities/embed.js"
-        ></script>
-        <div
-          data-iframe-width="150"
-          data-iframe-height="270"
-          data-share-badge-id="c5d68475-5088-4468-ad4e-aa211f7c3ba4"
-          data-share-badge-host="https://www.credly.com"
-        ></div>
-        <script
-          type="text/javascript"
-          async
-          src="//cdn.credly.com/assets/utilities/embed.js"
-        ></script>
-        <div
-          data-iframe-width="150"
-          data-iframe-height="270"
-          data-share-badge-id="8de24934-d629-492e-9e63-f6438b081c54"
-          data-share-badge-host="https://www.credly.com"
-        ></div>
-        <script
-          type="text/javascript"
-          async
-          src="//cdn.credly.com/assets/utilities/embed.js"
-        ></script>
-        <div
-          data-iframe-width="150"
-          data-iframe-height="270"
-          data-share-badge-id="704af5ee-fc7b-4b09-9dc7-c31a4c5ef970"
-          data-share-badge-host="https://www.credly.com"
-        ></div>
-        <script
-          type="text/javascript"
-          async
-          src="//cdn.credly.com/assets/utilities/embed.js"
-        ></script>
+        <div className="sm:col-span-6 col-span-12">
+          <h1 className="text-center text-3xl font-bold my-8"> Certifications </h1> 
+          <Slider/>
+        </div>
       </div>
     </div>
   );
