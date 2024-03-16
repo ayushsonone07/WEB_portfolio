@@ -49,6 +49,8 @@ const projects = [
   },
 ];
 
+projects.reverse()
+
 const ProjectsPage = () => {
   return (
     <div className="w-full grid  place-items-center ">
@@ -59,7 +61,7 @@ const ProjectsPage = () => {
       </h1>
       <div className="w-4/5	m-3">
         <ul className="lg:grid lg:grid-cols-3 lg:gap-6">
-          {projects.toReversed().map((project) => (
+          {projects.map((project) => (
             <div className="drop-shadow-xl hover:scale-110 transform transition ease-in-out duration-1000 rounded-xl b mx-4">
               <li key={project.id} className="mb-4 item-center border-solid ">
                 <img
