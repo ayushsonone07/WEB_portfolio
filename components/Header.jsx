@@ -3,9 +3,13 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { CiMenuFries } from "react-icons/ci";
 import { RxCross2 } from "react-icons/rx";
+// import useSound from 'use-sound';
+// import sound from "../public/sound.mp3";
 
 const Header = () => {
-  const [show, setShow] = useState(false)
+  // const touchSound = new Audio(sound);
+  const [show, setShow] = useState(false);
+  // const [playSound] = useSound(sound);
 
   return (
     <nav>
@@ -34,7 +38,7 @@ const Header = () => {
               <button className="sm:hidden col-span-2 transition delay-1000 duration-300 ease-in-out" onClick={()=>{setShow(true)}}>
                 <CiMenuFries 
                   size="25px"
-                  color="black"
+                  color="black" 
                 />
               </button>
         }
