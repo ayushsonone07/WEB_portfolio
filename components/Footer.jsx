@@ -49,7 +49,7 @@ const Footer = () => {
           <FaTelegramPlane size={25}/> <span className="px-5"><strong>Telegram</strong> : ayushonone07</span>
         </Link>
         <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=DmwnWrRrkzVjnZMcfrdQjlpwGDLdCRwxqXtgmZRdVdpwMKxcFZdMqfflbTFTNVcTzXPrDszxFDSv" className="flex text-xl text-black bg-white rounded-full hover:bg-red-300 ease-in-out duration-1000 px-5 py-2 mx-5 my-6">
-          <SiGmail size={25}/> <span className="px-5"><strong>Gamil</strong> : ayushonone07</span>
+          <SiGmail size={25}/> <span className="px-5"><strong>Gmail</strong> : ayushonone07</span>
         </a> 
       </div>  
       <p className="text-center mt-72">
