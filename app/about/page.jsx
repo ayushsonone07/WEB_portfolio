@@ -26,7 +26,7 @@ const aboutPage = () => {
       </h3>
       <br />
       <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full content-center items-center justify-center ">
-        <Link href="https://drive.google.com/file/d/1Dynek-kV43Pi9ATCifwOBxOatAVV-job/view?usp=sharing">
+        <Link href="https://drive.google.com/file/d/1E3oW7tFoRLPeuVaajs8LHcqNoJdj4MgG/view?usp=drive_link">
           Resume
         </Link>
       </button>
