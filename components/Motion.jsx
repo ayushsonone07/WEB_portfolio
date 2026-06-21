@@ -11,7 +11,7 @@ export default function Motion() {
   return (
     <motion.span
       {...fadeUp(0.1)}
-      className="sm:text-9xl text-7xl font-black bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent block"
+      className="sm:text-9xl text-7xl font-black bg-black bg-clip-text text-transparent block"
     >
       Welcome
     </motion.span>

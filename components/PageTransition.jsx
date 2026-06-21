@@ -13,7 +13,7 @@ export default function PageTransition({ children }) {
         <motion.div
           key={pathname + "-overlay"}
           className="fixed inset-0 z-[9999] pointer-events-none origin-left"
-          style={{ background: "linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%)" }}
+          style={{ background: "linear-gradient(135deg, #485563 0%, #29323c 50%, #29323c 100%)" }}
           initial={{ scaleX: 1 }}
           animate={{
             scaleX: [1, 1, 0],
