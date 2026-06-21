@@ -2,51 +2,43 @@
 
 import { motion, AnimatePresence } from "framer-motion"
 import { usePathname } from "next/navigation"
-import { useEffect, useState } from "react"
-
-const overlayVariants = {
-  initial: { scaleX: 0, originX: 1 },
-  enter: { scaleX: 1, originX: 1 },
-  exit: { scaleX: 0, originX: 0 },
-}
 
 export default function PageTransition({ children }) {
   const pathname = usePathname()
-  const [isTransitioning, setIsTransitioning] = useState(false)
-  const [currentPath, setCurrentPath] = useState(pathname)
-
-  useEffect(() => {
-    if (pathname !== currentPath) {
-      setIsTransitioning(true)
-      setTimeout(() => {
-        setCurrentPath(pathname)
-        setIsTransitioning(false)
-      }, 600)
-    }
-  }, [pathname, currentPath])
 
   return (
     <>
-      <AnimatePresence mode="wait">
-        {isTransitioning && (
-          <motion.div
-            key="overlay-enter"
-            variants={overlayVariants}
-            initial="initial"
-            animate="enter"
-            exit="exit"
-            transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="fixed inset-0 bg-black z-50"
-          />
-        )}
-      </AnimatePresence>
+      {/* ── SLIDE WIPE OVERLAY ── */}
       <AnimatePresence mode="wait">
         <motion.div
-          key={currentPath}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.15, delay: 0.3 }}
+          key={pathname + "-overlay"}
+          className="fixed inset-0 z-[9999] pointer-events-none origin-left"
+          style={{ background: "linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%)" }}
+          initial={{ scaleX: 1 }}
+          animate={{
+            scaleX: [1, 1, 0],
+            originX: ["0%", "0%", "100%"],
+          }}
+          transition={{
+            duration: 0.9,
+            times: [0, 0.45, 1],
+            ease: [0.76, 0, 0.24, 1],
+          }}
+        />
+      </AnimatePresence>
+
+      {/* ── PAGE CONTENT FADE ── */}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={pathname}
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -12 }}
+          transition={{
+            duration: 0.45,
+            delay: 0.35,
+            ease: [0.25, 0.46, 0.45, 0.94],
+          }}
         >
           {children}
         </motion.div>
