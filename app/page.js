@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import ProfileImg from "@/public/profile-instagram.webp";
+import ProfileImg from "@/public/profile.webp";
 import { useEffect, useState } from "react";
 
 function Quotes() {

@@ -22,13 +22,13 @@ const navLinks = [
 ];
 
 const socials = [
-  { icon: FaGithub,        href: "https://github.com/ayushsonone07",  label: "GitHub",    hoverClass: "hover:bg-gray-800 hover:text-white" },
-  { icon: FaLinkedinIn,    href: "https://linkedin.com",               label: "LinkedIn",  hoverClass: "hover:bg-blue-600 hover:text-white" },
-  { icon: FaWhatsapp,      href: "https://wa.me",                      label: "WhatsApp",  hoverClass: "hover:bg-green-500 hover:text-white" },
-  { icon: FaTelegramPlane, href: "https://t.me",                       label: "Telegram",  hoverClass: "hover:bg-sky-500 hover:text-white" },
-  { icon: FaFacebookF,     href: "https://facebook.com",               label: "Facebook",  hoverClass: "hover:bg-blue-700 hover:text-white" },
-  { icon: FaInstagram,     href: "https://instagram.com",              label: "Instagram", hoverClass: "hover:bg-pink-500 hover:text-white" },
-  { icon: FaYoutube,       href: "https://youtube.com",                label: "YouTube",   hoverClass: "hover:bg-red-600 hover:text-white" },
+  { icon: FaGithub,        href: "https://github.com/ayushsonone07",  label: "GitHub",    hoverClass: "hover:bg-gray-800 text-white" },
+  { icon: FaLinkedinIn,    href: "https://linkedin.com",               label: "LinkedIn",  hoverClass: "hover:bg-blue-600 text-white" },
+  { icon: FaWhatsapp,      href: "https://wa.me",                      label: "WhatsApp",  hoverClass: "hover:bg-green-500 text-white" },
+  { icon: FaTelegramPlane, href: "https://t.me",                       label: "Telegram",  hoverClass: "hover:bg-sky-500 text-white" },
+  { icon: FaFacebookF,     href: "https://facebook.com",               label: "Facebook",  hoverClass: "hover:bg-blue-700 text-white" },
+  { icon: FaInstagram,     href: "https://instagram.com",              label: "Instagram", hoverClass: "hover:bg-pink-500 text-white" },
+  { icon: FaYoutube,       href: "https://youtube.com",                label: "YouTube",   hoverClass: "hover:bg-red-600 text-white" },
 ];
 
 const FAB_RIGHT  = 24;
@@ -91,7 +91,7 @@ export default function Header() {
 
       {/* ── DESKTOP TOP NAV (thin bar for domain badge only) ── */}
       <nav
-        className={`fixed top-1 left-0 right-0 z-40 bg-white/60 backdrop-blur-xl border-b border-black/[0.06] transition-shadow duration-300 hidden md:flex
+        className={`fixed top-1 left-0 right-0 z-40 bg-white/60 backdrop-blur-xl border-b border-black/[0.06] transition-shadow duration-300 md:flex
           ${scrolled ? "shadow-[0_4px_24px_rgba(0,0,0,0.08)]" : ""}
           ${menuOpen ? "opacity-0 pointer-events-none" : "opacity-100"}`}
         style={{ transition: "opacity 0.2s ease, box-shadow 0.3s ease" }}
@@ -247,7 +247,7 @@ export default function Header() {
                         transitionDelay: menuOpen ? `${0.38 + i * 0.06}s` : "0s",
                       }}
                     >
-                      <span className="flex items-baseline gap-3">
+                      <span className="flex items-baseline gap-3 text-white">
                         <span className="font-mono text-[11px] md:text-[13px] text-white/20">
                           {num}
                         </span>
