@@ -1,20 +1,43 @@
+"use client"
+
 import Image from "next/image";
 import Link from "next/link";
 import ProfileImg from "@/public/profile-instagram.webp";
+import { useEffect, useState } from "react";
+
+function Quotes() {
+  const [quote, setQuote] = useState({ q: "", a: "" });
+
+  useEffect(() => {
+    fetch("https://zenquotes.io/api/today")
+      .then((res) => res.json())
+      .then((data) => setQuote(data[0] || { q: "", a: "" }))
+      .catch(() => setQuote({ q: "Stay hungry, stay foolish.", a: "Steve Jobs" }));
+  }, []);
+
+  return (
+    <section className="py-20 px-6">
+      <div className="max-w-3xl mx-auto text-center">
+        <blockquote className="text-lg sm:text-xl md:text-2xl font-light italic text-gray-700 mb-4">
+          &ldquo;{quote.q}&rdquo;
+        </blockquote>
+        <footer className="text-sm sm:text-base text-gray-500 font-medium">
+          &mdash; {quote.a}
+        </footer>
+      </div>
+    </section>
+  );
+}
 
 const skills = [
   "C",
-  "PHP",
+  "JAVA",
   "JavaScript",
   "SQL",
-  "NoSQL",
-  "React",
+  "Spring Boot",
+  "React.js",
   "Next.js",
   "Git",
-  "Linux",
-  "HTML",
-  "CSS",
-  "Node.js",
 ];
 
 const GlassCard = ({ title, children }) => {
@@ -93,6 +116,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* QUOTES */}
+      <Quotes />
 
       {/* SKILLS */}
       <section className="py-20 px-6">
